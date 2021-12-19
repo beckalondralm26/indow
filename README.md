@@ -1,0 +1,2 @@
+# indow
+#include &lt;Array.au3> #include &lt;File.au3>  Global $g_sDir = 'C:\Software' Global $g_aFolders Global $g_sLastFolder  $g_aFolders = _FileListToArrayRec($g_sDir, Default, $FLTAR_FOLDERS, Default, $FLTAR_SORT, $FLTAR_FULLPATH) If @ERROR Then     ConsoleWrite('ERROR: _FileListToArrayRec' &amp; @CRLF)     Exit EndIf  $g_sLastFolder = $g_aFolders[$g_aFolders[0]]  ConsoleWrite('Running: "' &amp; $g_sLastFolder &amp; '\app\windows\program.exe"')  Run($g_sLastFolder &amp; '\app\windows\program.exe')
